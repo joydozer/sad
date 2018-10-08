@@ -1,0 +1,416 @@
+
+/* Up to down animation */
+@keyframes uptodown {
+	0%{transform: translateY(-300%); opacity: 0;}
+	100%{transform: translateY(0); opacity: 1;}
+}
+
+@-webkit-keyframes uptodown {
+	0%{transform: translateY(-300%); opacity: 0;}
+	100%{transform: translateY(0); opacity: 1;}
+}
+
+@-moz-keyframes uptodown {
+	0%{transform: translateY(-300%); opacity: 0;}
+	100%{transform: translateY(0); opacity: 1;}
+}
+
+/* Left to right animation*/
+@keyframes slideleft {
+	0% {transform: translateX(-100%); opacity: 0;}
+	100% {transform: translateX(0); opacity: 1;}
+}
+
+@-webkit-keyframes slideleft {
+	0% {transform: translateX(-100%); opacity: 0;}
+	100% {transform: translateX(0); opacity: 1;}
+}
+
+@-moz-keyframes slideleft {
+	0% {transform: translateX(-100%); opacity: 0;}
+	100% {transform: translateX(0); opacity: 1;}
+}
+
+/* Right to left animation */
+@keyframes slideright {
+	0% {transform: translateX(100%); opacity: 0;}
+	100%{transform: translateX(0);opacity: 1;}
+}
+
+@-webkit-keyframes slideright {
+	0% {transform: translateX(100%); opacity: 0;}
+	100%{transform: translateX(0);opacity: 1;}
+}
+
+@-moz-keyframes slideright {
+	0% {transform: translateX(100%); opacity: 0;}
+	100%{transform: translateX(0);opacity: 1;}
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+}
+
+.navigation {
+	width: 6%;
+	background-color: rgba(255, 255, 255, 0);
+	text-align: center;
+	position: fixed;
+	left: 30px;
+	top: 15px;
+	z-index: 999;
+	margin: auto;
+}
+
+.navigation ul {
+		padding : 0px;
+		margin: auto;
+
+}
+
+.navigation li {
+	color: #666666;
+	font-family: Megrim, sans-serif;
+	font-size: 24px;
+	font-weight: 100;
+	letter-spacing: 7px;
+	margin: 2px auto;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 20px;
+
+}
+
+.navigation a {
+	text-decoration: none;
+	color: gray;
+}
+
+
+.sidenav {
+	height: 100%;
+	width: 0%;
+	transition: 0.6s;
+	overflow-x: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-image: url("vaporwave.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 60px;
+	
+}
+
+.sidenav a {
+	transition: 0.3s;
+	padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: cyan;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.pane-icon {
+	font-size: 48px;
+	color: gray;
+}
+
+.scrollup {
+background-color: rgba(0,0,0,0.7);
+color: white;
+width: 40px;
+height: 40px;
+position: fixed;
+bottom: 50px;
+right: 50px;
+text-decoration: none;
+display: none;
+font-size: 32px;
+}
+
+.scrollup a {
+	
+}
+
+.intro {
+	background-image: url("manado-view.jpg");
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	background-size: cover; /* Lebar & Panjang */
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.intro-content {
+	color: rgb(255,255,255);
+
+    position: relative;
+    top: 35%;
+}
+
+.intro-main-content {
+	margin-left: 15%;
+	margin-right: 15%;
+	animation: uptodown 2s ease-out;
+	-webkit-animation: uptodown 2s ease-out;
+	-moz-animation: uptodown 2s ease-out;
+}
+
+.intro-main-content h1 {
+	font-size: 48px;
+	font-family: Megrim, sans-serif;
+}
+
+.intro-main-content p {
+	font-size: 24px;
+	font-family: Quicksand, sans-serif;
+}
+
+
+.about {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255,255,255);
+	overflow-x: hidden;
+	text-align: center;
+}
+
+.about-content {
+	color: rgb(0,0,0);
+
+    position: relative;
+    top: 35%;
+}
+
+.about-main-content h1 {
+	font-family: Megrim, sans-serif;
+	font-size: 48px;
+}
+
+.about-main-content p {
+	font-family: Quicksand, sans-serif;
+	font-size: 18px;
+}
+
+#about-content1.animate1 {
+	animation: slideleft 2s ease-out;
+	-webkit-animation: slideleft 2s ease-out;
+	-moz-animation: slideleft 2s ease-out;
+}
+
+.contact {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0,0,0);
+	overflow-x: hidden;
+	text-align: center;
+}
+
+.contact-content {
+	color: rgb(255,255,255);
+	position: relative;
+	top: 15%;
+}
+
+#contact-content1.animate2 {
+	animation: slideright 2s ease-out;
+	-webkit-animation: slideright 2s ease-out;
+	-moz-animation: slideright 2s ease-out;
+}
+
+.contact-main-content h1 {
+	font-family: Megrim, sans-serif;
+	font-size: 48px;
+}
+
+.contact-main-content p {
+	font-family: Quicksand, sans-serif;
+	font-size: 24px;
+}
+
+
+.contact-form {
+	margin: 0% 25% 0% 25%;
+}
+
+.contact-main-content input {
+	text-align: left;
+	width: 95%;
+	height: 5%;
+}
+
+.contact-main-content textarea {
+	text-align: left;
+	font-family: Quicksand, sans-serif;
+	width: 95%;
+	height: 20%;
+}
+
+.anti-spam {
+	display: none;
+}
+
+.social-media {
+	width: 100%;
+	height: 100%;
+	background: rgb(255,255,255);
+}
+
+.instagram {
+	width: 100%;
+	height: 100%;
+
+}
+
+.instagram h3 {
+	font-size: 12px;
+}
+
+.instagram-content {
+	color: rgb(0,0,0);
+	position: relative;
+	top: 25%;
+}
+
+.instagram-content  h1 {
+	font-family: Quicksand, sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+
+.instagram-main-content img {
+	border-radius: 50%;
+}
+
+.instagram-main-content {
+	width: 75%;
+	font-family: Quicksand, sans-serif;
+}
+
+.instagram-main-content table {
+	text-align: center;
+}
+
+.instagram-main-content h2 {
+	font-size: 32px;
+	text-align: center;
+}
+
+.instagram-main-content td {
+	
+}
+
+.username-insta a {
+	text-decoration: none;
+}
+
+.follow-button a {
+	text-decoration: none;
+	background-color: LightBlue;
+	color: White;
+	border-radius: 5%;
+	padding: 2% 20% 2% 20%;
+}
+
+.twitter {
+	width: 100%;
+	height: 100%;
+
+}
+
+.twitter-content {
+	color: rgb(0,0,0);
+	position: relative;
+	top: 25%;
+}
+
+.twitter-content  h1 {
+	font-family: Quicksand, sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+
+.twitter-main-content img {
+	border-radius: 50%;
+}
+
+.twitter-main-content {
+	width: 50%;
+	font-family: Quicksand, sans-serif;
+
+}
+
+.facebook {
+	width: 100%;
+	height: 100%;
+
+}
+
+.facebook-content {
+	color: rgb(0,0,0);
+	position: relative;
+	top: 25%;
+}
+
+.facebook-content  h1 {
+	font-family: Quicksand, sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+
+.facebook-main-content img {
+	border-radius: 50%;
+}
+
+.facebook-main-content {
+	width: 50%;
+	font-family: Quicksand, sans-serif;
+}
+
+
+
+.facebook-main-content h2 {
+	font-size: 32px;
+	text-align: center;
+}
+
+.facebook-main-content h3 {
+	font-size: 24px;
+}
+
+.twitter-main-content h2 {
+	font-size: 32px;
+	text-align: center;
+}
+
+.twitter-main-content h3 {
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 800px) {
+				
+	.pane-icon {
+		font-size: 48px;
+	}
+}
